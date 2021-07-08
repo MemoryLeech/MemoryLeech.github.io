@@ -1,8 +1,14 @@
-.initPadding{
-    padding : 10px;
+.initPadding {
+  padding: 10px;
 }
 
-.mainContainer{
-    width : 800px;
-    margin : auto;
+.mainContainer {
+  max-width: 800px;
+  margin: auto;
 }
+
+// @media screen and (min-width: 600px) {
+//   body {
+//     background-color: olive;
+//   }
+// }
