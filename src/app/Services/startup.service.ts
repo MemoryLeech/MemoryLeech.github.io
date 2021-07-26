@@ -6,12 +6,18 @@ import { HttpClient } from '@angular/common/http'
 })
 export class StartupService {
   
-  //data : any
+  theme_data : string[] = [""]
 
   constructor(private http: HttpClient) { }
-  init(){
-    console.log("Hello there")
-    this.http.get('https://raw.githubusercontent.com/MemoryLeech/RepoController/main/repos.md', {responseType: 'text'})
-      .subscribe(data => console.log(data))
+  init() {
+    return new Promise<void>((resolve, reject) => {
+      this.http.get('https://raw.githubusercontent.com/MemoryLeech/RepoController/main/repos.md', {responseType: 'text'})
+          .subscribe(d => {
+            let temp = d.split(' ')
+            this.theme_data = temp.slice(1, temp.length-2)
+            resolve()
+          })
+    })
   }
+
 }

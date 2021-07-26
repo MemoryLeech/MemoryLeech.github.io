@@ -1,6 +1,28 @@
-.post{
+:host{
     background-color : #3E3772;
-    min-height: 200px;
+    min-height: 170px;
     border-radius: 10px;
-    padding : 5px 30px;
+    padding : 30px 30px;
+
+    /* Grid */
+    display : grid;
+    grid-template-rows: auto auto;
+    grid-template-columns: 110px auto;
+}
+
+.card-title h3:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.description {
+    grid-column: 1 / 3;
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+img{
+    display : block;
+    width : 80px;
+    height : 80px;
 }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { StartupService } from 'src/app/Services/startup.service';
 
 @Component({
   selector: 'app-home',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  content : string[] = [""]
+
+  constructor(public startupService : StartupService) {
+    this.content = startupService.theme_data
+    
+  }
 
   ngOnInit(): void {
+    
   }
 
 }

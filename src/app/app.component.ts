@@ -7,8 +7,5 @@ import { StartupService } from './Services/startup.service';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'temp';
-  constructor(private _startupService : StartupService){
-    _startupService.init()
-  }
+  
 }
